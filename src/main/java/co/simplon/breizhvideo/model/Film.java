@@ -36,6 +36,7 @@ public class Film {
         this.length = length;
     }
 
+    // Getter et setter
     public long getId() {
         return id;
     }

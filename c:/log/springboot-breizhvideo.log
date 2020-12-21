@@ -609,3 +609,39 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2020-12-21 14:16:28.844  INFO 39085 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-12-21 14:16:29.018  INFO 39085 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-12-21 14:16:29.025  INFO 39085 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.209 seconds (JVM running for 3.55)
+2020-12-21 14:28:28.334  INFO 39085 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 14:28:28.335  INFO 39085 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 14:28:28.336  INFO 39085 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 14:28:28.454 DEBUG 39085 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 14:28:37.900 DEBUG 39085 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 14:41:32.215  INFO 39085 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 14:41:32.216  INFO 39085 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 14:41:32.218  INFO 39085 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 14:41:32.233  INFO 39085 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 14:41:34.976  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 41661 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 14:41:34.979  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 14:41:35.599  INFO 41661 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 14:41:35.647  INFO 41661 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2020-12-21 14:41:36.093  INFO 41661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 14:41:36.102  INFO 41661 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 14:41:36.103  INFO 41661 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 14:41:36.179  INFO 41661 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 14:41:36.179  INFO 41661 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1133 ms
+2020-12-21 14:41:36.337  INFO 41661 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 14:41:36.371  INFO 41661 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 14:41:36.459  INFO 41661 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 14:41:36.529  INFO 41661 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 14:41:36.677  INFO 41661 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 14:41:36.687  INFO 41661 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 14:41:37.151 DEBUG 41661 --- [main] org.hibernate.SQL                        : alter table film add column name varchar(255)
+2020-12-21 14:41:37.201 DEBUG 41661 --- [main] org.hibernate.SQL                        : alter table film add column post_code varchar(255)
+2020-12-21 14:41:37.267  INFO 41661 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 14:41:37.277  INFO 41661 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 14:41:37.547  WARN 41661 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 14:41:37.637  INFO 41661 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 14:41:37.824  INFO 41661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 14:41:37.832  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.303 seconds (JVM running for 3.697)
+2020-12-21 14:41:42.163  INFO 41661 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 14:41:42.164  INFO 41661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 14:41:42.164  INFO 41661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2020-12-21 14:41:42.278 DEBUG 41661 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select village0_.id as id1_0_, village0_.name as name6_0_, village0_.post_code as post_cod7_0_ from film village0_
