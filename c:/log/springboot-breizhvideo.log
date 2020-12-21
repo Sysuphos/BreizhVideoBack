@@ -389,3 +389,198 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2020-12-21 11:01:06.312  INFO 17524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-12-21 11:01:06.508  INFO 17524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-12-21 11:01:06.516  INFO 17524 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.613 seconds (JVM running for 4.179)
+2020-12-21 11:13:29.583  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 19315 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 11:13:29.587  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 11:13:30.416  INFO 19315 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 11:13:30.432  INFO 19315 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2020-12-21 11:13:31.005  INFO 19315 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 11:13:31.017  INFO 19315 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 11:13:31.017  INFO 19315 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 11:13:31.106  INFO 19315 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 11:13:31.106  INFO 19315 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1426 ms
+2020-12-21 11:13:31.344  INFO 19315 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 11:13:31.389  INFO 19315 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 11:13:31.476  INFO 19315 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 11:13:31.544  INFO 19315 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 11:13:31.683  INFO 19315 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 11:13:31.703  INFO 19315 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-12-21 11:13:31.869  INFO 19315 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 11:13:31.876  INFO 19315 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 11:13:31.918  WARN 19315 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 11:13:32.024  INFO 19315 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 11:13:32.243  INFO 19315 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 11:13:32.252  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.284 seconds (JVM running for 3.834)
+2020-12-21 12:12:26.735  INFO 19315 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 12:12:26.736  INFO 19315 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 12:12:26.737  INFO 19315 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 12:12:26.741  INFO 19315 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 12:12:29.477  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 23456 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 12:12:29.480  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 12:12:30.110  INFO 23456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 12:12:30.122  INFO 23456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2020-12-21 12:12:30.583  INFO 23456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 12:12:30.592  INFO 23456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 12:12:30.593  INFO 23456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 12:12:30.673  INFO 23456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 12:12:30.673  INFO 23456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+2020-12-21 12:12:30.869  INFO 23456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 12:12:30.908  INFO 23456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 12:12:31.007  INFO 23456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 12:12:31.076  INFO 23456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 12:12:31.232  INFO 23456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 12:12:31.246  INFO 23456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 12:12:31.472  INFO 23456 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 12:12:31.483  INFO 23456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 12:12:31.524  WARN 23456 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 12:12:31.628  INFO 23456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 12:12:31.846  INFO 23456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 12:12:31.856  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.81 seconds (JVM running for 3.196)
+2020-12-21 12:30:17.140  INFO 23456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 12:30:17.141  INFO 23456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 12:30:17.142  INFO 23456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 12:34:34.996  INFO 23456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 12:34:34.996  INFO 23456 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 12:34:34.998  INFO 23456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 12:34:35.009  INFO 23456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 12:34:37.073  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 25127 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 12:34:37.077  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 12:34:37.711  INFO 25127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 12:34:37.723  INFO 25127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2020-12-21 12:34:38.188  INFO 25127 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 12:34:38.197  INFO 25127 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 12:34:38.197  INFO 25127 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 12:34:38.260  INFO 25127 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 12:34:38.260  INFO 25127 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1116 ms
+2020-12-21 12:34:38.443  INFO 25127 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 12:34:38.480  INFO 25127 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 12:34:38.582  INFO 25127 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 12:34:38.656  INFO 25127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 12:34:38.795  INFO 25127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 12:34:38.806  INFO 25127 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 12:34:39.036  INFO 25127 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 12:34:39.045  INFO 25127 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 12:34:39.102  WARN 25127 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 12:34:39.231  INFO 25127 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 12:34:39.433  INFO 25127 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 12:34:39.443  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.798 seconds (JVM running for 3.159)
+2020-12-21 12:35:30.924  INFO 25127 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 12:35:30.925  INFO 25127 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 12:35:30.926  INFO 25127 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 13:38:56.474  INFO 25127 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:38:56.475  INFO 25127 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:38:56.477  INFO 25127 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 13:38:56.481  INFO 25127 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 13:38:58.582  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 34834 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 13:38:58.584  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 13:38:59.218  INFO 34834 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 13:38:59.233  INFO 34834 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2020-12-21 13:38:59.691  INFO 34834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 13:38:59.700  INFO 34834 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 13:38:59.700  INFO 34834 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 13:38:59.776  INFO 34834 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 13:38:59.776  INFO 34834 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1131 ms
+2020-12-21 13:38:59.971  INFO 34834 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 13:39:00.010  INFO 34834 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 13:39:00.115  INFO 34834 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 13:39:00.193  INFO 34834 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 13:39:00.359  INFO 34834 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 13:39:00.371  INFO 34834 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 13:39:00.596  INFO 34834 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 13:39:00.607  INFO 34834 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:39:00.656  WARN 34834 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 13:39:00.761  INFO 34834 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:39:00.960  INFO 34834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 13:39:00.968  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.825 seconds (JVM running for 3.208)
+2020-12-21 13:39:39.272  INFO 34834 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 13:39:39.273  INFO 34834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 13:39:39.275  INFO 34834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 13:40:30.925  INFO 34834 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:40:30.926  INFO 34834 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:40:30.927  INFO 34834 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 13:40:30.938  INFO 34834 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 13:41:05.816  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 35210 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 13:41:05.819  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 13:41:06.510  INFO 35210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 13:41:06.526  INFO 35210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2020-12-21 13:41:07.152  INFO 35210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 13:41:07.166  INFO 35210 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 13:41:07.166  INFO 35210 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 13:41:07.263  INFO 35210 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 13:41:07.263  INFO 35210 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1371 ms
+2020-12-21 13:41:07.498  INFO 35210 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 13:41:07.544  INFO 35210 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 13:41:07.664  INFO 35210 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 13:41:07.755  INFO 35210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 13:41:07.968  INFO 35210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 13:41:07.989  INFO 35210 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 13:41:08.236  INFO 35210 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 13:41:08.244  INFO 35210 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:41:08.304  WARN 35210 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 13:41:08.434  INFO 35210 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:41:08.700  INFO 35210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 13:41:08.712  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.407 seconds (JVM running for 4.488)
+2020-12-21 13:41:17.920  INFO 35210 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 13:41:17.920  INFO 35210 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 13:41:17.922  INFO 35210 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-12-21 13:42:02.979  INFO 35210 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:42:02.980  INFO 35210 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:42:02.983  INFO 35210 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 13:42:02.996  INFO 35210 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 13:45:29.841  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 35758 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 13:45:29.844  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 13:45:30.539  INFO 35758 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 13:45:30.607  INFO 35758 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2020-12-21 13:45:31.123  INFO 35758 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 13:45:31.135  INFO 35758 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 13:45:31.135  INFO 35758 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 13:45:31.228  INFO 35758 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 13:45:31.229  INFO 35758 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1312 ms
+2020-12-21 13:45:31.418  INFO 35758 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 13:45:31.464  INFO 35758 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 13:45:31.568  INFO 35758 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 13:45:31.641  INFO 35758 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 13:45:31.802  INFO 35758 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 13:45:31.814  INFO 35758 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 13:45:32.296  INFO 35758 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 13:45:32.304  INFO 35758 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 13:45:32.567  WARN 35758 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 13:45:32.670  INFO 35758 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 13:45:32.901  INFO 35758 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 13:45:32.908  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.537 seconds (JVM running for 3.9)
+2020-12-21 13:45:37.798  INFO 35758 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 13:45:37.799  INFO 35758 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 13:45:37.800  INFO 35758 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 13:45:37.973 DEBUG 35758 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 13:48:00.879 DEBUG 35758 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 13:48:07.248 DEBUG 35758 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 13:48:21.458 DEBUG 35758 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 14:03:11.063 DEBUG 35758 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-21 14:10:15.650  INFO 35758 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-21 14:10:15.650  INFO 35758 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 14:10:15.652  INFO 35758 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-21 14:10:15.665  INFO 35758 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-21 14:10:18.416  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 38055 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
+2020-12-21 14:10:18.419  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-21 14:10:19.037  INFO 38055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-21 14:10:19.084  INFO 38055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+2020-12-21 14:10:19.529  INFO 38055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-21 14:10:19.542  INFO 38055 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-21 14:10:19.542  INFO 38055 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-21 14:10:19.612  INFO 38055 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-21 14:10:19.612  INFO 38055 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+2020-12-21 14:10:19.799  INFO 38055 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-21 14:10:19.834  INFO 38055 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-21 14:10:19.931  INFO 38055 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-21 14:10:20.004  INFO 38055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-21 14:10:20.157  INFO 38055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-21 14:10:20.168  INFO 38055 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-21 14:10:20.613  INFO 38055 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-21 14:10:20.621  INFO 38055 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-21 14:10:20.855  WARN 38055 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-21 14:10:20.947  INFO 38055 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-21 14:10:21.141  INFO 38055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-21 14:10:21.151  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.18 seconds (JVM running for 3.537)
+2020-12-21 14:10:24.362  INFO 38055 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-21 14:10:24.363  INFO 38055 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-21 14:10:24.364  INFO 38055 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-21 14:10:29.413 DEBUG 38055 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
