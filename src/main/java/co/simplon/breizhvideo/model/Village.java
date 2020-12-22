@@ -2,9 +2,9 @@ package co.simplon.breizhvideo.model;
 
 import javax.persistence.*;
 
-// mapp à la base de donnée
+// map à la base de donnée
 @Entity
-@Table(name = "film")
+@Table(name = "village")
 public class Village {
 
     @Id

@@ -1,677 +1,352 @@
-2020-12-21 10:59:27.360  INFO 17281 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 17281 (/home/yannicklajdecki/Documents/Simplon/videobreizh/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/videobreizh)
-2020-12-21 10:59:27.363  INFO 17281 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 10:59:27.977  INFO 17281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 10:59:27.990  INFO 17281 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2020-12-21 10:59:28.544  INFO 17281 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 10:59:28.558  INFO 17281 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 10:59:28.558  INFO 17281 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 10:59:28.643  INFO 17281 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 10:59:28.644  INFO 17281 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1223 ms
-2020-12-21 10:59:28.874  INFO 17281 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 10:59:28.915  INFO 17281 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 10:59:29.012  INFO 17281 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 10:59:29.090  INFO 17281 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 10:59:30.281 ERROR 17281 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-java.sql.SQLException: Access denied for user ''@'localhost' (using password: NO)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-
-2020-12-21 10:59:30.283  WARN 17281 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-
-java.sql.SQLException: Access denied for user ''@'localhost' (using password: NO)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-
-2020-12-21 10:59:30.285 ERROR 17281 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2020-12-21 10:59:30.286  WARN 17281 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2020-12-21 10:59:30.289  INFO 17281 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-12-21 10:59:30.300  INFO 17281 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-12-21 10:59:30.310 ERROR 17281 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	... 17 common frames omitted
-Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	... 34 common frames omitted
-
-2020-12-21 11:00:29.880  INFO 17435 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 17435 (/home/yannicklajdecki/Documents/Simplon/videobreizh/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/videobreizh)
-2020-12-21 11:00:29.889  INFO 17435 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 11:00:30.557  INFO 17435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 11:00:30.570  INFO 17435 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2020-12-21 11:00:31.109  INFO 17435 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 11:00:31.119  INFO 17435 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 11:00:31.120  INFO 17435 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 11:00:31.187  INFO 17435 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 11:00:31.187  INFO 17435 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
-2020-12-21 11:00:31.379  INFO 17435 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 11:00:31.422  INFO 17435 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 11:00:31.536  INFO 17435 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 11:00:31.617  INFO 17435 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 11:00:32.785 ERROR 17435 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-
-2020-12-21 11:00:32.787  WARN 17435 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-
-java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-
-2020-12-21 11:00:32.791 ERROR 17435 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2020-12-21 11:00:32.793  WARN 17435 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-2020-12-21 11:00:32.798  INFO 17435 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-12-21 11:00:32.809  INFO 17435 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-12-21 11:00:32.821 ERROR 17435 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.2.jar:5.3.2]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-2.4.1.jar:2.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-2.4.1.jar:2.4.1]
-	at co.simplon.breizhvideo.BreizhvideoApplication.main(BreizhvideoApplication.java:10) ~[classes/:na]
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.2.jar:5.3.2]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.2.jar:5.3.2]
-	... 17 common frames omitted
-Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar:5.4.25.Final]
-	... 34 common frames omitted
-
-2020-12-21 11:01:03.585  INFO 17524 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 17524 (/home/yannicklajdecki/Documents/Simplon/videobreizh/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/videobreizh)
-2020-12-21 11:01:03.589  INFO 17524 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 11:01:04.468  INFO 17524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 11:01:04.487  INFO 17524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2020-12-21 11:01:05.166  INFO 17524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 11:01:05.180  INFO 17524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 11:01:05.180  INFO 17524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 11:01:05.264  INFO 17524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 11:01:05.264  INFO 17524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1583 ms
-2020-12-21 11:01:05.514  INFO 17524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 11:01:05.559  INFO 17524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 11:01:05.684  INFO 17524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 11:01:05.780  INFO 17524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 11:01:05.956  INFO 17524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 11:01:05.984  INFO 17524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-12-21 11:01:06.158  INFO 17524 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 11:01:06.167  INFO 17524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 11:01:06.206  WARN 17524 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 11:01:06.312  INFO 17524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 11:01:06.508  INFO 17524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 11:01:06.516  INFO 17524 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.613 seconds (JVM running for 4.179)
-2020-12-21 11:13:29.583  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 19315 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 11:13:29.587  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 11:13:30.416  INFO 19315 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 11:13:30.432  INFO 19315 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-2020-12-21 11:13:31.005  INFO 19315 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 11:13:31.017  INFO 19315 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 11:13:31.017  INFO 19315 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 11:13:31.106  INFO 19315 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 11:13:31.106  INFO 19315 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1426 ms
-2020-12-21 11:13:31.344  INFO 19315 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 11:13:31.389  INFO 19315 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 11:13:31.476  INFO 19315 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 11:13:31.544  INFO 19315 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 11:13:31.683  INFO 19315 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 11:13:31.703  INFO 19315 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-12-21 11:13:31.869  INFO 19315 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 11:13:31.876  INFO 19315 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 11:13:31.918  WARN 19315 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 11:13:32.024  INFO 19315 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 11:13:32.243  INFO 19315 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 11:13:32.252  INFO 19315 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.284 seconds (JVM running for 3.834)
-2020-12-21 12:12:26.735  INFO 19315 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 12:12:26.736  INFO 19315 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 12:12:26.737  INFO 19315 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 12:12:26.741  INFO 19315 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 12:12:29.477  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 23456 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 12:12:29.480  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 12:12:30.110  INFO 23456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 12:12:30.122  INFO 23456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2020-12-21 12:12:30.583  INFO 23456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 12:12:30.592  INFO 23456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 12:12:30.593  INFO 23456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 12:12:30.673  INFO 23456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 12:12:30.673  INFO 23456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
-2020-12-21 12:12:30.869  INFO 23456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 12:12:30.908  INFO 23456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 12:12:31.007  INFO 23456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 12:12:31.076  INFO 23456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 12:12:31.232  INFO 23456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 12:12:31.246  INFO 23456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 12:12:31.472  INFO 23456 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 12:12:31.483  INFO 23456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 12:12:31.524  WARN 23456 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 12:12:31.628  INFO 23456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 12:12:31.846  INFO 23456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 12:12:31.856  INFO 23456 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.81 seconds (JVM running for 3.196)
-2020-12-21 12:30:17.140  INFO 23456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 12:30:17.141  INFO 23456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 12:30:17.142  INFO 23456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 12:34:34.996  INFO 23456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 12:34:34.996  INFO 23456 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 12:34:34.998  INFO 23456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 12:34:35.009  INFO 23456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 12:34:37.073  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 25127 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 12:34:37.077  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 12:34:37.711  INFO 25127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 12:34:37.723  INFO 25127 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2020-12-21 12:34:38.188  INFO 25127 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 12:34:38.197  INFO 25127 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 12:34:38.197  INFO 25127 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 12:34:38.260  INFO 25127 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 12:34:38.260  INFO 25127 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1116 ms
-2020-12-21 12:34:38.443  INFO 25127 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 12:34:38.480  INFO 25127 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 12:34:38.582  INFO 25127 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 12:34:38.656  INFO 25127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 12:34:38.795  INFO 25127 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 12:34:38.806  INFO 25127 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 12:34:39.036  INFO 25127 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 12:34:39.045  INFO 25127 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 12:34:39.102  WARN 25127 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 12:34:39.231  INFO 25127 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 12:34:39.433  INFO 25127 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 12:34:39.443  INFO 25127 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.798 seconds (JVM running for 3.159)
-2020-12-21 12:35:30.924  INFO 25127 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 12:35:30.925  INFO 25127 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 12:35:30.926  INFO 25127 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 13:38:56.474  INFO 25127 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:38:56.475  INFO 25127 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:38:56.477  INFO 25127 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 13:38:56.481  INFO 25127 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 13:38:58.582  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 34834 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 13:38:58.584  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 13:38:59.218  INFO 34834 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 13:38:59.233  INFO 34834 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2020-12-21 13:38:59.691  INFO 34834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 13:38:59.700  INFO 34834 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 13:38:59.700  INFO 34834 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 13:38:59.776  INFO 34834 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 13:38:59.776  INFO 34834 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1131 ms
-2020-12-21 13:38:59.971  INFO 34834 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 13:39:00.010  INFO 34834 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 13:39:00.115  INFO 34834 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 13:39:00.193  INFO 34834 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 13:39:00.359  INFO 34834 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 13:39:00.371  INFO 34834 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 13:39:00.596  INFO 34834 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 13:39:00.607  INFO 34834 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:39:00.656  WARN 34834 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 13:39:00.761  INFO 34834 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:39:00.960  INFO 34834 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 13:39:00.968  INFO 34834 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 2.825 seconds (JVM running for 3.208)
-2020-12-21 13:39:39.272  INFO 34834 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 13:39:39.273  INFO 34834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 13:39:39.275  INFO 34834 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 13:40:30.925  INFO 34834 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:40:30.926  INFO 34834 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:40:30.927  INFO 34834 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 13:40:30.938  INFO 34834 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 13:41:05.816  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 35210 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 13:41:05.819  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 13:41:06.510  INFO 35210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 13:41:06.526  INFO 35210 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-2020-12-21 13:41:07.152  INFO 35210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 13:41:07.166  INFO 35210 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 13:41:07.166  INFO 35210 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 13:41:07.263  INFO 35210 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 13:41:07.263  INFO 35210 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1371 ms
-2020-12-21 13:41:07.498  INFO 35210 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 13:41:07.544  INFO 35210 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 13:41:07.664  INFO 35210 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 13:41:07.755  INFO 35210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 13:41:07.968  INFO 35210 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 13:41:07.989  INFO 35210 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 13:41:08.236  INFO 35210 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 13:41:08.244  INFO 35210 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:41:08.304  WARN 35210 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 13:41:08.434  INFO 35210 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:41:08.700  INFO 35210 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 13:41:08.712  INFO 35210 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.407 seconds (JVM running for 4.488)
-2020-12-21 13:41:17.920  INFO 35210 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 13:41:17.920  INFO 35210 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 13:41:17.922  INFO 35210 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2020-12-21 13:42:02.979  INFO 35210 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:42:02.980  INFO 35210 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:42:02.983  INFO 35210 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 13:42:02.996  INFO 35210 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 13:45:29.841  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 35758 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 13:45:29.844  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 13:45:30.539  INFO 35758 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 13:45:30.607  INFO 35758 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
-2020-12-21 13:45:31.123  INFO 35758 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 13:45:31.135  INFO 35758 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 13:45:31.135  INFO 35758 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 13:45:31.228  INFO 35758 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 13:45:31.229  INFO 35758 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1312 ms
-2020-12-21 13:45:31.418  INFO 35758 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 13:45:31.464  INFO 35758 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 13:45:31.568  INFO 35758 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 13:45:31.641  INFO 35758 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 13:45:31.802  INFO 35758 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 13:45:31.814  INFO 35758 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 13:45:32.296  INFO 35758 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 13:45:32.304  INFO 35758 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 13:45:32.567  WARN 35758 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 13:45:32.670  INFO 35758 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 13:45:32.901  INFO 35758 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 13:45:32.908  INFO 35758 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.537 seconds (JVM running for 3.9)
-2020-12-21 13:45:37.798  INFO 35758 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 13:45:37.799  INFO 35758 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 13:45:37.800  INFO 35758 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 13:45:37.973 DEBUG 35758 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 13:48:00.879 DEBUG 35758 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 13:48:07.248 DEBUG 35758 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 13:48:21.458 DEBUG 35758 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 14:03:11.063 DEBUG 35758 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 14:10:15.650  INFO 35758 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:10:15.650  INFO 35758 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:10:15.652  INFO 35758 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 14:10:15.665  INFO 35758 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 14:10:18.416  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 38055 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 14:10:18.419  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 14:10:19.037  INFO 38055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 14:10:19.084  INFO 38055 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
-2020-12-21 14:10:19.529  INFO 38055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 14:10:19.542  INFO 38055 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 14:10:19.542  INFO 38055 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 14:10:19.612  INFO 38055 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 14:10:19.612  INFO 38055 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
-2020-12-21 14:10:19.799  INFO 38055 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 14:10:19.834  INFO 38055 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 14:10:19.931  INFO 38055 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 14:10:20.004  INFO 38055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 14:10:20.157  INFO 38055 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 14:10:20.168  INFO 38055 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 14:10:20.613  INFO 38055 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 14:10:20.621  INFO 38055 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:10:20.855  WARN 38055 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 14:10:20.947  INFO 38055 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:10:21.141  INFO 38055 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 14:10:21.151  INFO 38055 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.18 seconds (JVM running for 3.537)
-2020-12-21 14:10:24.362  INFO 38055 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 14:10:24.363  INFO 38055 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 14:10:24.364  INFO 38055 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 14:10:29.413 DEBUG 38055 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 14:16:23.648  INFO 38055 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:16:23.649  INFO 38055 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:16:23.652  INFO 38055 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 14:16:23.660  INFO 38055 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 14:16:26.257  INFO 39085 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 39085 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 14:16:26.259  INFO 39085 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 14:16:26.907  INFO 39085 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 14:16:26.961  INFO 39085 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
-2020-12-21 14:16:27.462  INFO 39085 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 14:16:27.474  INFO 39085 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 14:16:27.474  INFO 39085 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 14:16:27.559  INFO 39085 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 14:16:27.559  INFO 39085 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1238 ms
-2020-12-21 14:16:27.755  INFO 39085 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 14:16:27.796  INFO 39085 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 14:16:27.885  INFO 39085 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 14:16:27.951  INFO 39085 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 14:16:28.092  INFO 39085 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 14:16:28.102  INFO 39085 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 14:16:28.525  INFO 39085 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 14:16:28.532  INFO 39085 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:16:28.759  WARN 39085 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 14:16:28.844  INFO 39085 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:16:29.018  INFO 39085 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 14:16:29.025  INFO 39085 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.209 seconds (JVM running for 3.55)
-2020-12-21 14:28:28.334  INFO 39085 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 14:28:28.335  INFO 39085 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 14:28:28.336  INFO 39085 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 14:28:28.454 DEBUG 39085 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 14:28:37.900 DEBUG 39085 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
-2020-12-21 14:41:32.215  INFO 39085 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:41:32.216  INFO 39085 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:41:32.218  INFO 39085 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 14:41:32.233  INFO 39085 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 14:41:34.976  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 41661 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideoBack)
-2020-12-21 14:41:34.979  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 14:41:35.599  INFO 41661 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 14:41:35.647  INFO 41661 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
-2020-12-21 14:41:36.093  INFO 41661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 14:41:36.102  INFO 41661 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 14:41:36.103  INFO 41661 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 14:41:36.179  INFO 41661 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 14:41:36.179  INFO 41661 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1133 ms
-2020-12-21 14:41:36.337  INFO 41661 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 14:41:36.371  INFO 41661 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 14:41:36.459  INFO 41661 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 14:41:36.529  INFO 41661 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 14:41:36.677  INFO 41661 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 14:41:36.687  INFO 41661 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 14:41:37.151 DEBUG 41661 --- [main] org.hibernate.SQL                        : alter table film add column name varchar(255)
-2020-12-21 14:41:37.201 DEBUG 41661 --- [main] org.hibernate.SQL                        : alter table film add column post_code varchar(255)
-2020-12-21 14:41:37.267  INFO 41661 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 14:41:37.277  INFO 41661 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 14:41:37.547  WARN 41661 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 14:41:37.637  INFO 41661 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 14:41:37.824  INFO 41661 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 14:41:37.832  INFO 41661 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.303 seconds (JVM running for 3.697)
-2020-12-21 14:41:42.163  INFO 41661 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 14:41:42.164  INFO 41661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 14:41:42.164  INFO 41661 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2020-12-21 14:41:42.278 DEBUG 41661 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select village0_.id as id1_0_, village0_.name as name6_0_, village0_.post_code as post_cod7_0_ from film village0_
-2020-12-21 15:22:47.372  INFO 41661 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-12-21 15:22:47.375  INFO 41661 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 15:22:47.378  INFO 41661 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-12-21 15:22:47.384  INFO 41661 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-12-21 15:24:37.550  INFO 51724 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 51724 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
-2020-12-21 15:24:37.554  INFO 51724 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
-2020-12-21 15:24:38.175  INFO 51724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-21 15:24:38.221  INFO 51724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
-2020-12-21 15:24:38.723  INFO 51724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-12-21 15:24:38.735  INFO 51724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-12-21 15:24:38.735  INFO 51724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2020-12-21 15:24:38.820  INFO 51724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-12-21 15:24:38.821  INFO 51724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
-2020-12-21 15:24:39.037  INFO 51724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-12-21 15:24:39.079  INFO 51724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
-2020-12-21 15:24:39.174  INFO 51724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2020-12-21 15:24:39.251  INFO 51724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-12-21 15:24:39.407  INFO 51724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-12-21 15:24:39.422  INFO 51724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-12-21 15:24:39.858  INFO 51724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-12-21 15:24:39.865  INFO 51724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-21 15:24:40.112  WARN 51724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-12-21 15:24:40.201  INFO 51724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-12-21 15:24:40.378  INFO 51724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-12-21 15:24:40.386  INFO 51724 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.334 seconds (JVM running for 3.733)
-2020-12-21 15:24:50.722  INFO 51724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-12-21 15:24:50.723  INFO 51724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-12-21 15:24:50.724  INFO 51724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2020-12-21 15:24:50.856 DEBUG 51724 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select village0_.id as id1_0_, village0_.name as name6_0_, village0_.post_code as post_cod7_0_ from film village0_
-2020-12-21 15:24:58.199 DEBUG 51724 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:00:09.072 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:00:46.099 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:00:49.668 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:00:53.785 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:01:02.739 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:01:24.190 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:01:27.601 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:02:00.786 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:02:01.501 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:02:21.115 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:03:06.910 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:03:06.983 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:03:15.048 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:03:17.251 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:04:06.930 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:04:08.897 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:04:12.638 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:08:26.924 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:08:38.266 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:09:34.217 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:10:24.181 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:10:30.616 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:11:12.983 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:11:15.296 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:11:16.171 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:17:09.485 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:17:36.573 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:18:09.087 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:21:28.972 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:09.149 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:09.477 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:13.675 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:18.303 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:18.828 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:19.039 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:19.235 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:19.432 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:22:19.642 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:23:21.709 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:23:37.631 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:24:17.094 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:24:21.461 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:25:02.384 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:25:06.610 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:26:02.350 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:26:08.396 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:30:29.679 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:30:31.370 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:31:40.024 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:31:43.024 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:33:11.361 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:33:33.670 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:33:54.022 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:05.006 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:17.024 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:25.027 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:37.023 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:42.030 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:48.020 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:34:58.019 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:11.020 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:15.020 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:19.001 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:33.013 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:37.594 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:48.540 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:35:59.390 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:47:39.700 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:48:14.015 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:48:15.023 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:12.000 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:20.028 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:35.001 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:36.013 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:40.015 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:44.996 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:50.015 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:49:51.015 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:05.006 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:13.013 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:20.003 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:25.999 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:29.016 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:34.018 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:49.012 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:51.018 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:50:58.180 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:52:02.023 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:52:05.014 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:52:29.000 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:52:35.982 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:53:07.742 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:53:07.869 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:53:17.090 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:54:12.221 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:54:12.364 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:54:14.033 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:54:16.728 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:55:21.041 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:02.939 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:04.286 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:06.844 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:08.619 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:15.347 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:48.714 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:56:59.643 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:57:12.779 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:57:15.386 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:57:56.002 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:58:16.724 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:58:16.832 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:58:22.003 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:58:29.720 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:58:59.987 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:18.625 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:20.132 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:22.586 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:34.652 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:41.002 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:42.396 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 00:59:44.690 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:04.255 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:06.068 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:07.649 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:17.326 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:19.343 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:42.517 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:00:44.366 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:04.140 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:04.293 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:04.879 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:05.406 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:07.588 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:20.332 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:30.622 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:30.861 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:31.147 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:31.413 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:32.465 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:35.527 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:36.759 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:40.592 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:47.109 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:02:59.090 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:03:10.855 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:03:12.877 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:03:15.828 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:03:20.960 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:03:34.657 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:06:33.001 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:06:34.005 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:07:04.002 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:07:21.033 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:07:46.293 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:07:57.011 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:04.001 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:08.011 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:12.021 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:38.010 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:39.000 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:08:51.021 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:16.003 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:19.021 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:25.017 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:31.001 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:37.001 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:09:43.022 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:10:45.025 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:10:47.019 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:10:51.600 DEBUG 92647 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:12.842 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:17.576 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:40.022 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:41.026 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:43.019 DEBUG 92647 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:50.001 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:53.019 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:11:59.010 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:12:03.409 DEBUG 92647 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:12:37.161 DEBUG 92647 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:12:45.827 DEBUG 92647 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:12:46.950 DEBUG 92647 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:14:02.716 DEBUG 92647 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:14:07.878 DEBUG 92647 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:14:12.410 DEBUG 92647 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:14:26.787 DEBUG 92647 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:15:23.642  INFO 92647 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 01:15:23.643  INFO 92647 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 01:15:23.646  INFO 92647 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-22 01:15:23.649  INFO 92647 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-22 01:20:44.619  INFO 115959 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 115959 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
+2020-12-22 01:20:44.622  INFO 115959 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-22 01:20:45.273  INFO 115959 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-22 01:20:45.318  INFO 115959 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2020-12-22 01:20:45.771  INFO 115959 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-22 01:20:45.780  INFO 115959 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-22 01:20:45.780  INFO 115959 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-22 01:20:45.858  INFO 115959 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-22 01:20:45.858  INFO 115959 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1169 ms
+2020-12-22 01:20:46.032  INFO 115959 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-22 01:20:46.067  INFO 115959 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-22 01:20:46.168  INFO 115959 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-22 01:20:46.246  INFO 115959 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-22 01:20:46.402  INFO 115959 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-22 01:20:46.414  INFO 115959 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-22 01:20:46.873  INFO 115959 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-22 01:20:46.882  INFO 115959 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 01:20:47.146  WARN 115959 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 01:20:47.249  INFO 115959 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 01:20:47.435  INFO 115959 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-22 01:20:47.444  INFO 115959 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.255 seconds (JVM running for 3.665)
+2020-12-22 01:21:02.310  INFO 115959 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-22 01:21:02.311  INFO 115959 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-22 01:21:02.313  INFO 115959 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-22 01:21:02.441 DEBUG 115959 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 01:21:20.208  INFO 115959 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 01:21:20.209  INFO 115959 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 01:21:20.212  INFO 115959 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-22 01:21:20.224  INFO 115959 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-22 08:57:14.537  INFO 7319 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 7319 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
+2020-12-22 08:57:14.539  INFO 7319 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-22 08:57:15.250  INFO 7319 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-22 08:57:15.314  INFO 7319 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2020-12-22 08:57:15.890  INFO 7319 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-22 08:57:15.901  INFO 7319 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-22 08:57:15.901  INFO 7319 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-22 08:57:15.997  INFO 7319 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-22 08:57:15.998  INFO 7319 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1397 ms
+2020-12-22 08:57:16.198  INFO 7319 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-22 08:57:16.266  INFO 7319 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-22 08:57:16.428  INFO 7319 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-22 08:57:16.519  INFO 7319 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-22 08:57:16.721  INFO 7319 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-22 08:57:16.736  INFO 7319 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-22 08:57:17.371  INFO 7319 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-22 08:57:17.379  INFO 7319 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 08:57:17.704  WARN 7319 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 08:57:17.834  INFO 7319 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 08:57:18.085  INFO 7319 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-22 08:57:18.094  INFO 7319 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 4.063 seconds (JVM running for 4.507)
+2020-12-22 08:57:35.551  INFO 7319 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-22 08:57:35.552  INFO 7319 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-22 08:57:35.553  INFO 7319 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-22 08:57:35.698 DEBUG 7319 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:58:53.182 DEBUG 7319 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:58:54.179 DEBUG 7319 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:58:58.175 DEBUG 7319 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:59:23.460 DEBUG 7319 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:59:27.155 DEBUG 7319 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:59:43.756 DEBUG 7319 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:59:46.761 DEBUG 7319 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 08:59:54.198 DEBUG 7319 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:00:58.863 DEBUG 7319 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:01:02.172 DEBUG 7319 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:01:05.546 DEBUG 7319 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:01:09.174 DEBUG 7319 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:04:03.556 DEBUG 7319 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:37:35.594  INFO 7319 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:37:35.595  INFO 7319 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:37:35.597  INFO 7319 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-22 09:37:35.602  INFO 7319 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-22 09:38:17.870  INFO 13480 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 13480 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
+2020-12-22 09:38:17.880  INFO 13480 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-22 09:38:18.638  INFO 13480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-22 09:38:18.701  INFO 13480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2020-12-22 09:38:19.256  INFO 13480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-22 09:38:19.267  INFO 13480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-22 09:38:19.267  INFO 13480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-22 09:38:19.337  INFO 13480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-22 09:38:19.337  INFO 13480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1314 ms
+2020-12-22 09:38:19.553  INFO 13480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-22 09:38:19.602  INFO 13480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-22 09:38:19.728  INFO 13480 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-22 09:38:19.836  INFO 13480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-22 09:38:20.003  INFO 13480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-22 09:38:20.014  INFO 13480 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-22 09:38:20.550 DEBUG 13480 --- [main] org.hibernate.SQL                        : alter table film add column film_id bigint not null
+2020-12-22 09:38:20.624 DEBUG 13480 --- [main] org.hibernate.SQL                        : alter table film add column village_id bigint not null
+2020-12-22 09:38:20.672  INFO 13480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-22 09:38:20.682  INFO 13480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:38:20.952  WARN 13480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 09:38:21.037  INFO 13480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:38:21.213  INFO 13480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-22 09:38:21.220  INFO 13480 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.946 seconds (JVM running for 4.401)
+2020-12-22 09:43:25.607  INFO 13480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-22 09:43:25.608  INFO 13480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-22 09:43:25.610  INFO 13480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-22 09:43:25.775 DEBUG 13480 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.film_id as film_id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 09:55:55.065  INFO 13480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:55:55.066  INFO 13480 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:55:55.068  INFO 13480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-22 09:55:55.075  INFO 13480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-22 09:55:57.836  INFO 16242 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 16242 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
+2020-12-22 09:55:57.839  INFO 16242 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-22 09:55:58.462  INFO 16242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-22 09:55:58.508  INFO 16242 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2020-12-22 09:55:58.989  INFO 16242 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-22 09:55:58.999  INFO 16242 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-22 09:55:58.999  INFO 16242 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-22 09:55:59.076  INFO 16242 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-22 09:55:59.077  INFO 16242 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1173 ms
+2020-12-22 09:55:59.248  INFO 16242 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-22 09:55:59.284  INFO 16242 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-22 09:55:59.375  INFO 16242 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-22 09:55:59.445  INFO 16242 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-22 09:55:59.593  INFO 16242 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-22 09:55:59.604  INFO 16242 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-22 09:56:00.062 DEBUG 16242 --- [main] org.hibernate.SQL                        : alter table village add column village_id bigint not null
+2020-12-22 09:56:00.118  INFO 16242 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-22 09:56:00.124  INFO 16242 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:56:00.391  WARN 16242 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 09:56:00.486  INFO 16242 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:56:00.687  INFO 16242 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-22 09:56:00.694  INFO 16242 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.301 seconds (JVM running for 3.679)
+2020-12-22 09:59:52.168  INFO 16242 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:59:52.169  INFO 16242 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:59:52.170  INFO 16242 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-12-22 09:59:52.177  INFO 16242 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-12-22 09:59:54.841  INFO 16720 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Starting BreizhvideoApplication using Java 11.0.9 on pop-os with PID 16720 (/home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo/target/classes started by yannicklajdecki in /home/yannicklajdecki/Documents/Simplon/hackaton/BreizhVideo)
+2020-12-22 09:59:54.844  INFO 16720 --- [main] c.s.breizhvideo.BreizhvideoApplication   : No active profile set, falling back to default profiles: default
+2020-12-22 09:59:55.526  INFO 16720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-22 09:59:55.576  INFO 16720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2020-12-22 09:59:56.077  INFO 16720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-12-22 09:59:56.086  INFO 16720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-12-22 09:59:56.087  INFO 16720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-22 09:59:56.159  INFO 16720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-12-22 09:59:56.162  INFO 16720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1258 ms
+2020-12-22 09:59:56.341  INFO 16720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-22 09:59:56.379  INFO 16720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-22 09:59:56.475  INFO 16720 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-22 09:59:56.554  INFO 16720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-12-22 09:59:56.710  INFO 16720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-12-22 09:59:56.720  INFO 16720 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-12-22 09:59:57.271  INFO 16720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-22 09:59:57.277  INFO 16720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-22 09:59:57.564  WARN 16720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-22 09:59:57.664  INFO 16720 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 09:59:57.901  INFO 16720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-22 09:59:57.911  INFO 16720 --- [main] c.s.breizhvideo.BreizhvideoApplication   : Started BreizhvideoApplication in 3.545 seconds (JVM running for 3.915)
+2020-12-22 10:00:18.222  INFO 16720 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-22 10:00:18.223  INFO 16720 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-12-22 10:00:18.224  INFO 16720 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-12-22 10:00:18.349 DEBUG 16720 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:02:35.393 DEBUG 16720 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:03:20.690 DEBUG 16720 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:06:30.695 DEBUG 16720 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:06:30.776 DEBUG 16720 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:06:32.804 DEBUG 16720 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:06:32.886 DEBUG 16720 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:06:34.895 DEBUG 16720 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:10:56.560 DEBUG 16720 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
+2020-12-22 10:18:24.083 DEBUG 16720 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select film0_.id as id1_0_, film0_.description as descript2_0_, film0_.length as length3_0_, film0_.release_year as release_4_0_, film0_.title as title5_0_ from film film0_
