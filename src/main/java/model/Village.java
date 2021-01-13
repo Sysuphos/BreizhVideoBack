@@ -1,4 +1,4 @@
-package co.simplon.breizhvideo.model;
+package model;
 
 import javax.persistence.*;
 
@@ -27,7 +27,7 @@ public class Village {
         this.name = name;
         this.postCode = postCode;
     }
-// Getter et setter
+    // Getter et setter
     public long getId() {
         return id;
     }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/breizhvideo.iml" filepath="$PROJECT_DIR$/breizhvideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BreaizhVideo-Backend.iml" filepath="$PROJECT_DIR$/BreaizhVideo-Backend.iml" />
     </modules>
   </component>
 </project>

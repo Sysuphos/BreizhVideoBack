@@ -1,4 +1,4 @@
-package co.simplon.breizhvideo.model;
+package model;
 
 import javax.persistence.*;
 
@@ -23,11 +23,11 @@ public class Film {
     @Column(name = "length")
     private int length;
 
-//default constructor
+    //default constructor
     public Film() {
 
     }
-//constructor
+    //constructor
     public Film(String title, String description, int releaseYear, int length) {
         super();
         this.title = title;
