@@ -1,12 +1,12 @@
-package controller;
+package com.example.BreaizhVideoBackend.controller;
 
 
-import model.Film;
+import com.example.BreaizhVideoBackend.model.Film;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import repository.FilmRepository;
+import com.example.BreaizhVideoBackend.repository.FilmRepository;
 
 import java.util.List;
 

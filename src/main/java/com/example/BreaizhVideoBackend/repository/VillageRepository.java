@@ -1,7 +1,7 @@
-package repository;
+package com.example.BreaizhVideoBackend.repository;
 
 
-import model.Village;
+import com.example.BreaizhVideoBackend.model.Village;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

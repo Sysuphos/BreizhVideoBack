@@ -1,4 +1,4 @@
-package model;
+package com.example.BreaizhVideoBackend.model;
 
 import javax.persistence.*;
 
@@ -17,7 +17,7 @@ public class Film {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "releaseYear")
+    @Column(name = "release_year")
     private int releaseYear;
 
     @Column(name = "length")
